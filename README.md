@@ -65,4 +65,44 @@ This shows that Admin and Editor roles can edit, while Viewer cannot.
 5.Provide an example of using union and intersection types in TypeScript.
 
 
+* union :  Union types allow a variable to hold values of one of several specified types.
+
+example :
+type ContactInfo = string | number; 
+
+function displayContact(contact: ContactInfo) {
+  if (typeof contact === 'string') {
+    console.log(`Email: ${contact}`);
+  } else {
+    console.log(`Phone: ${contact}`);
+  }
+}
+
+displayContact("sarkarrajkumar3460@gmail.com"); // Output: Email: sarkarrajkumar3460@gmail.com
+displayContact(1234567890);          // Output: Phone: 1234567890
+
+
+* intersection:
+Intersection types combine multiple types into a single type, meaning a value of this type must possess all the properties of each intersected type.
+
+example: 
+
+interface HasName {
+  name: string;
+}
+
+interface HasAge {
+  age: number;
+}
+
+type Person = HasName & HasAge; 
+
+const user: Person = {
+  name: "Raj",
+  age: 22,
+};
+
+console.log(user.name); // Output: Raj
+console.log(user.age);  // Output: 22
+
 
