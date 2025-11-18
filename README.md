@@ -56,13 +56,13 @@ const canEdit = (role: UserRoles) => {
   } else return false;
 };
 
-const isEditPermissable = canEdit(UserRoles.Admin);
-console.log(isEditPermissable);
+const isEditPer = canEdit(UserRoles.Admin);
+console.log(isEditPer);
 This shows that Admin and Editor roles can edit, while Viewer cannot.
 
 
 
-5.
+5.Provide an example of using union and intersection types in TypeScript.
 
 
 
